@@ -8,6 +8,8 @@ import { Form } from '@/components/ui/form';
 import CustomFormField from '../CustomFormField';
 import SubmitButton from '../SubmitButton';
 import { UserFormValidation } from '@/lib/validation';
+import { createUser } from '@/lib/actions/patient.action';
+import { useRouter } from 'next/navigation';
 
 export enum FormFieldType {
   TEXTAREA = 'textarea',
@@ -20,6 +22,7 @@ export enum FormFieldType {
 }
 
 function PatientForm() {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<z.infer<typeof UserFormValidation>>({
@@ -31,7 +34,7 @@ function PatientForm() {
     },
   });
   // 2. Define a submit handler.
-  function onSubmit({
+  async function onSubmit({
     name,
     email,
     phone,
@@ -44,15 +47,20 @@ function PatientForm() {
         email,
         phone,
       };
+
+      const user = await createUser(userData);
+
+      if (user) router.push(`/patients/${user.$id}/register`);
     } catch (error) {
-      console;
+      console.log(error);
     }
+    setIsLoading(false);
   }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
         <section>
-          <h1 className="header">Hi, There</h1>
+          <h1 className="header">Hi, There 👋</h1>
           <p className="text-dark-700">Schedude your first appointment</p>
         </section>
 
