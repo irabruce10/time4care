@@ -77,6 +77,8 @@ NEXT_PUBLIC_BUCKET_ID=
 NEXT_PUBLIC_ADMIN_PASSKEY=112233
 ```
 
+Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [Appwrite](https://appwrite.io/) website.
+
 ```bash
 npm run dev
 ```
