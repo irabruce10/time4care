@@ -3,13 +3,11 @@ import React, { useEffect, useState } from 'react';
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import {
   InputOTP,
@@ -20,7 +18,7 @@ import {
 
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
-import { encryptKey } from '@/lib/utils';
+import { decryptKey, encryptKey } from '@/lib/utils';
 
 const PassKeyModal = () => {
   const [open, setOpen] = useState(true);
@@ -32,8 +30,9 @@ const PassKeyModal = () => {
   const encryptedKey =
     typeof window !== 'undefined' ? localStorage.getItem('accessKey') : null;
   useEffect(() => {
+    const accessKey = encryptedKey && decryptKey(encryptedKey);
     if (path) {
-      if (passkey === process.env.NEXT_PUBLIC_ADMIN_PASSKEY) {
+      if (accessKey === process.env.NEXT_PUBLIC_ADMIN_PASSKEY) {
         setOpen(false);
         router.push('/admin');
       } else {
