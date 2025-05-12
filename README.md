@@ -34,9 +34,14 @@
 
 👉 Manage and Track Application Performance Using Sentry: The application uses Sentry to monitor and track its performance and detect any errors.
 
-and many more, including code architecture and reusability
+## Tech Stack ⚙️
 
-First, run the development server:
+- Next.js
+- Appwrite
+- Typescript
+- TailwindCSS
+- ShadCN
+- Twilio
 
 ```bash
 npm run dev
