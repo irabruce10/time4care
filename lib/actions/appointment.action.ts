@@ -103,7 +103,7 @@ export const updateAppointment = async ({
 
     // send sms to user
 
-    const smsMessage = `Hi,it's Time4Care.
+    const smsMessage = `Hi, it's Time4Care.
    ${
      type === 'schedule'
        ? `Your Appointment has been scheduled for ${
