@@ -10,13 +10,17 @@ export default function Home({ searchParams }: SearchParamProps) {
       {isAdmin && <PassKeyModal />}
       <section className="remove-scrollbar container my-auto ">
         <div className="sub-container max-w-[496px]">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            alt="logo"
-            width={1000}
-            height={1000}
-            className="mb-12 h-10 w-fit"
-          />
+          <div className="flex items-center mb-12 space-x-3">
+            <Image
+              src="/assets/icons/logo-icon.svg"
+              alt="Time4Care logo"
+              width={40}
+              height={40}
+              className="block"
+            />
+            <h1 className="text-2xl font-bold">Time4Care</h1>
+          </div>
+
           <PatientForm />
           <div className=" text-14-regular mt-20 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
