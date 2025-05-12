@@ -10,7 +10,7 @@
 
 <pre align="center"> <span style="background-color:#1E3A8A;color:white;padding:10px 20px;border-radius:5px;font-size:54px;">HealthCare Management System</span> </pre>
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+`HealthCare Management System` is a digital platform designed to streamline operations in healthcare facilities. It allows patients to easily register, book, and manage appointments with doctors. Built with Next.js, the system includes administrative tools for scheduling, confirming, and canceling appointments, along with integrated SMS notifications to keep patients informed.
 
 ## Getting Started
 
