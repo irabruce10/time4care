@@ -52,7 +52,13 @@ git clone https://github.com/irabruce10/time4care.git
 cd time4care
 ```
 
-Install dependencies
+#### Installation
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
 
 ```bash
 npm run dev
