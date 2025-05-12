@@ -1,10 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { Doctors } from '@/constants';
 import { getAppointment } from '@/lib/actions/appointment.action';
+import { getUser } from '@/lib/actions/patient.action';
 import { formatDateTime } from '@/lib/utils';
+import * as Sentry from '@sentry/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+
 
 const success = async ({
   params: { userId },
@@ -15,6 +18,8 @@ const success = async ({
   const doctor = Doctors.find(
     (doc) => doc.name === appointment.primaryPhysician,
   );
+  const user = await getUser(userId);
+  Sentry.setExtra('user_view_new-appointment', user.name);
 
   return (
     <div className="flex h-screen max-h-screen px-[-5%]">
