@@ -43,6 +43,17 @@
 - ShadCN
 - Twilio
 
+## Getting Started 🤸
+
+#### Clone the repository
+
+```bash
+git clone https://github.com/irabruce10/time4care.git
+cd time4care
+```
+
+Install dependencies
+
 ```bash
 npm run dev
 # or
