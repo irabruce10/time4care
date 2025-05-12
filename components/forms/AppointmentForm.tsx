@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { set, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Form } from '@/components/ui/form';
 import CustomFormField from '../CustomFormField';
