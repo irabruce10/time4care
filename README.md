@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/-Appwrite-F43E5F?style=for-the-badge&logo=appwrite&logoColor=white" alt="Appwrite" />
 </p>
 
-<pre align="center"> HealthCare Management System</span> </pre>
+<h1 align="center"> <span style="background-color:#1E3A8A;color:white;padding:10px 20px;border-radius:5px;font-size:64px;">HealthCare Management System</span> </h1>
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
